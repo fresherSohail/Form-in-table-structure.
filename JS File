@@ -1,0 +1,38 @@
+function validateForm(event) {
+    event.preventDefault(); // Prevent form submission to server
+
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const childAge = document.getElementById('childage').value;
+    const childFirstName = document.getElementById('childFirstName').value;
+    const childLastName = document.getElementById('childLastName').value;
+    const schoolName = document.getElementById('schoolName').value;
+    const streetName1 = document.getElementById('streetName1').value;
+    const streetName2 = document.getElementById('streetName2').value;
+    const cityName = document.getElementById('cityName').value;
+    const region = document.getElementById('region').value;
+    const zipCode = document.getElementById('zipCode').value;
+    const city = document.getElementById('city').value;
+    const phoneNumber = document.getElementById('phoneNumber').value;
+
+    // Logging the input values in a table format in the console
+    console.table([
+        { "Field": "First Name", "Value": firstName },
+        { "Field": "Last Name", "Value": lastName },
+        { "Field": "Child Age", "Value": childAge },
+        { "Field": "Child First Name", "Value": childFirstName },
+        { "Field": "Child Last Name", "Value": childLastName },
+        { "Field": "School Name", "Value": schoolName },
+        { "Field": "Street Address 1", "Value": streetName1 },
+        { "Field": "Street Address 2", "Value": streetName2 },
+        { "Field": "City Name", "Value": cityName },
+        { "Field": "Region", "Value": region },
+        { "Field": "Postal/Zip Code", "Value": zipCode },
+        { "Field": "City", "Value": city },
+        { "Field": "Phone Number", "Value": phoneNumber }
+    ]);
+
+    return false; // Prevent actual form submission
+}
+
+document.getElementById('input-btn').addEventListener('click', validateForm);
